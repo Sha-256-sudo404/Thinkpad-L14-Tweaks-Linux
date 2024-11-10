@@ -14,7 +14,7 @@ Source: https://wiki.archlinux.org/title/Network_configuration/Wireless#Realtek
 
 # Kernel parameters for keyboard quirks and amd suspend issue: 
 
-"atkbd.reset" for keyboard key auto-repeat error and "amdgpu.mcbp=0" for no blank display on resume from lockscreen/ S3 suspend
+"atkbd.reset" for keyboard key auto-repeat error and "amdgpu.mcbp=0" for blank display on resume from lockscreen/ suspend
 
 S3 / [deep] sleep should be chosen for this model, S0ix does not work!!! So far 1.34 bios update does not break S3 / [deep] suspend, but the battery is still 45Wh, so expect around only 5hrs of runtime for a 80% charged battery even already having proper suspend support
 
