@@ -28,7 +28,7 @@ Usecases: https://discourse.ubuntu.com/t/fine-tuning-the-ubuntu-24-04-kernel-for
 # Disk tweaks
 disk: scheduler set to 'none' for NVME for better performance and less cpu overhead to save battery via tlp (Phoronix benchmark shows none has best first-place finishes)
 
-/tmp relocated to tmpfs for less i/o on ssd for better and better performance (do this you have more than enough ram) Consult Archwiki/ Easy Linux Tips Project for linux mint/ ubuntu)
+/tmp relocated to tmpfs for less i/o on ssd for better performance (do this you have more than enough ram) Consult Archwiki/ Easy Linux Tips Project)
 
 In bios, set uma buffer size to larger values for better performance (do this you have more than enough ram, else use 'auto') after testing. The perfect value varies from config to config
 
