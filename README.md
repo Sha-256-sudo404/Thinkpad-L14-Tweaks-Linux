@@ -1,6 +1,6 @@
 # Thinkpad-L14-Tweaks-Linux
 
-#TLP aggressive power-saving config for L14 Gen 1 ( mainly AMD, specifically R5 Pro 4650U )
+TLP aggressive power-saving config for L14 Gen 1 ( mainly AMD, specifically R5 Pro 4650U )
 
 Caution: ASPM should not be set to powersupersave for realtek wifi stability as per Archwiki and from personal testing
 
