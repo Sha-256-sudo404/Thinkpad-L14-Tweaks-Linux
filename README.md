@@ -20,7 +20,7 @@ S3 / [deep] sleep should be chosen for this model, S0ix does not work!!! So far 
 
 # Kernel parameter for low latency:
 
-"preempt=full" (must only be applied after applying "amdgpu.mcbp=0", else freezes on resume happen). Improves desktop experience at the sacrifice of bandwidth
+"preempt=full" (must only be applied with "amdgpu.mcbp=0", else freezes on resume happen). Improves desktop experience at the sacrifice of bandwidth
 Usecases: https://discourse.ubuntu.com/t/fine-tuning-the-ubuntu-24-04-kernel-for-low-latency-throughput-and-power-efficiency/44834
 
 # Uefi update available via fwupdmgr from LVFS
