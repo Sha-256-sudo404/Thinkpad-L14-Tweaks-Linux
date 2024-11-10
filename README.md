@@ -34,7 +34,7 @@ In bios, set uma buffer size to larger values for better performance (do this yo
 
 set trim ssd daily for heavy users (trim is done automatically every 7 days)
 
-# Improve audio quality, for speakers on L14
+# Improve audio quality, for speakers on L14 to compensate for lack of atmos
 1. install JamesDSP, open source dsp
 2. enable 2x4x2 FFT Convolution script in Liveprog tab
 3. All done to improve surround sound on L14
