@@ -14,14 +14,24 @@ Source: https://wiki.archlinux.org/title/Network_configuration/Wireless#Realtek
 
 # Kernel parameters for keyboard quirks and amd suspend issues: 
 
-"atkbd.reset" for keyboard key auto-repeat error and "amdgpu.mcbp=0" for blank display on resume from lockscreen/ suspend
+"atkbd.reset" for keyboard key auto-repeat error
 
 S3 / [deep] sleep should be chosen for this model, S0ix does not work!!! So far 1.34 bios update does not break S3 / [deep] suspend, but the battery is still 45Wh, so expect around only 5hrs of runtime for a 80% charged battery even already having proper suspend support
 
 # Parameters for low latency:
 
-"preempt=full" (must only be applied with "amdgpu.mcbp=0", else freezes on resume happen). Improves desktop experience at the sacrifice of bandwidth
+"preempt=full". Improves desktop experience at the sacrifice of bandwidth
 Usecases: https://discourse.ubuntu.com/t/fine-tuning-the-ubuntu-24-04-kernel-for-low-latency-throughput-and-power-efficiency/44834
+
+net.core.default_qdisc = fq_pie in /etc/sysctl.conf for better low latency experience( tested on my AMD machine with 8852AE chip)
+(remember to load kernel module sch_fq_pie before setting)
+
+
+w /proc/sys/vm/page_lock_unfairness - - - - 1
+w /proc/sys/vm/page-cluster - - - - 0
+w /proc/sys/vm/watermark_boost_factor - - - - 0
+
+setting in /etc/tmpfiles.d/xxxx.conf (xxxx= any name) will lower maximum latency while maintaining decent throughput and consistency for gaming
 
 # Uefi update available via fwupdmgr from LVFS
 
